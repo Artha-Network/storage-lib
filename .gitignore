@@ -1,0 +1,19 @@
+ # @trust-escrow/storage-lib
+# Build artifacts & dependencies
+node_modules/
+dist/
+
+# Environment files (keep secrets out of git)
+.env
+.env.*
+!.env.example
+
+# Test/coverage artifacts
+coverage/
+
+# OS/editor cruft
+.DS_Store
+Thumbs.db
+*.log
+.pnpm-debug.log*
+npm-debug.log*
