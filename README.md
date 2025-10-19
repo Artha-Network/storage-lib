@@ -264,11 +264,7 @@ pnpm test
 
 ---
 
-## FAQ
-**Testnet now, mainnet later?** Point envs to testnet-friendly gateways; flip to mainnet Bundlr/IPFS later—no code changes.  
-**Do I need PostgreSQL?** Not for bytes, but yes for **auditability** (dealId ↔ {primaryCid, mirrorCid, sha256, party}).  
-**Can I switch which backend is primary?** Yes—default is Arweave→IPFS; you can invert or make it env-driven.
-
+ 
 ---
 
 ## License
