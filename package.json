@@ -1,0 +1,60 @@
+{
+  "name": "@trust-escrow/storage-lib",
+  "version": "0.1.0",
+  "description": "Thin abstraction over Arweave & IPFS with hashing, dual-pin, and integrity verification for Artha Network.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "escrow",
+    "ipfs",
+    "arweave",
+    "storage",
+    "integrity",
+    "hashing",
+    "typescript",
+    "web3"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Artha-Network/storage-lib.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Artha-Network/storage-lib/issues"
+  },
+  "homepage": "https://github.com/Artha-Network/storage-lib#readme",
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "tsc -p tsconfig.json",
+    "lint": "eslint .",
+    "test": "node --test --loader ts-node/esm tests/index.test.ts",
+    "prepare": "pnpm build"
+  },
+  "dependencies": {
+    "cross-fetch": "^4.0.0",
+    "formdata-node": "^6.0.1",
+    "pg": "^8.12.0",
+    "undici": "^6.19.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.5",
+    "eslint": "^9.11.1",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
