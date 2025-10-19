@@ -1,0 +1,41 @@
+{
+  // tsconfig.json for @trust-escrow/storage-lib
+  // Accuracy: ESM build for Node 20+, strict typing, emits d.ts to dist
+  // Scope: Only this library (src, tests). Output is consumed as an npm package.
+  "compilerOptions": {
+    // Target modern JS features supported by Node 20
+    "target": "ES2022",
+
+    // ESM all the way (matches package.json `"type": "module"`)
+    "module": "ES2022",
+    "moduleResolution": "bundler",
+
+    // Generate .d.ts for consumers
+    "declaration": true,
+    "emitDeclarationOnly": false,
+
+    // Project layout
+    "rootDir": "src",
+    "outDir": "dist",
+    "lib": ["ES2022"],
+
+    // Interop & syntax guarantees
+    "verbatimModuleSyntax": true,   // Keep import/export as written (TS 5+)
+    "esModuleInterop": false,       // ESM native; no CJS interop shims
+
+    // Quality gates
+    "strict": true,
+    "noImplicitAny": true,
+    "noUncheckedIndexedAccess": true,
+    "noEmitOnError": true,
+    "skipLibCheck": true,
+
+    // Types (Node runtime)
+    "types": ["node"],
+
+    // Source maps not required for library dist by default
+    "sourceMap": false
+  },
+  "include": ["src", "tests"],
+  "exclude": ["node_modules", "dist"]
+}
