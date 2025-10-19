@@ -74,8 +74,6 @@ npm i @trust-escrow/storage-lib
 
 ## Environment
 
-Create `.env` (do **not** commit):
-
 ```dotenv
 # Storage backends
 ARWEAVE_ENDPOINT=https://arweave.net           # or a Bundlr-like uploader
