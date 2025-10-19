@@ -272,5 +272,7 @@ MIT
 
 ## Maintainers
 - **Sampada Dhungana** – Maintainer  
-- Bijay Prasai – Maintainer  
+- Bijay Prasai – Maintainer
+- Birochan Mainali - Maintainer
+- Tanchopa - Mainatainer
 - Artha Network team
