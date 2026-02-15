@@ -1,0 +1,23 @@
+type Deal @entity {
+  id: ID! # dealId
+  buyer: Bytes! # address
+  seller: Bytes! # address
+  amount: BigInt!
+  createdAt: BigInt!
+  status: DealStatus!
+  disputes: [Dispute!]! @derivedFrom(field: "deal")
+}
+
+enum DealStatus {
+  LOCKED
+  RELEASED
+  REFUNDED
+  DISPUTED
+}
+
+type Dispute @entity {
+  id: ID!
+  deal: Deal!
+  reason: String!
+  evidenceCid: String
+}
